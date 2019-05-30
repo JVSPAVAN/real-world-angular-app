@@ -1,0 +1,45 @@
+<div>
+
+   <h3>View Faculty Details By Name</h3>
+   
+
+   
+   Select CustName : <select [(ngModel)]="selectedvalue"    (change)="getSelectedFaculty()">
+                        <option *ngFor="let fac of faculty" class="active"   value="{{fac.facName}}">{{fac.facName}}</option>
+                     </select>
+                     
+                     
+                     <br>
+                     
+                      <br>
+                      
+                      <table *ngIf="faculty1" border="1" width="50%" class="table">
+                      
+                          <tr class="info">
+                          
+                            <th>Faculty Name</th>
+                            <th>Stream</th>
+                              <th>Location</th></tr>
+                        
+                        
+                        
+                        	<tr>	     
+                              <td>{{faculty1.facName}}</td>
+                            
+                              <td>{{faculty1.stream}}</td>
+                          
+                                                      
+                              <td>{{faculty1.location}}</td>
+                          
+                          </tr>
+                         
+                      
+                      </table>
+                     
+                     
+                     
+
+
+
+
+</div>

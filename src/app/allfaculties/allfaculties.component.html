@@ -1,0 +1,35 @@
+  <div class="container">
+
+<h3>Details of Faculties</h3>
+ <table class="table" *ngIf="faculty">
+    <thead>
+    
+    
+        <tr class="danger">
+             <th>Faculty Name</th>
+              <th>Stream</th>
+               <th>Location</th>
+            
+         </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let fac of faculty" class="active"> 
+         
+            <td>{{fac.facName}}</td>
+         
+             <td>{{fac.stream}}</td>
+             
+              <td>{{fac.location}}</td>
+              
+         </tr>
+    
+    
+    
+    </tbody>
+    
+    </table>
+
+   
+
+
+</div>

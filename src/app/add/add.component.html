@@ -1,0 +1,71 @@
+<p>
+
+</p>
+
+<h2>Faculty Registration </h2>
+
+<form [formGroup]="formgroup" (submit)=submit()>
+  <span style="color:green">{{message}}</span>
+  <table border=2>
+    <tr>
+      <td>Trainer Id</td>
+      <td>
+        <input type="text" formControlName="Trainer_Id" required/>
+      </td>
+      <td>
+        <span *ngIf="formgroup.get('Trainer_Id').hasError('required')" style="color:red">Trainer Id is required </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Trainer Name </td>
+      <td>
+        <input type="text" formControlName="Trainer_Name" />
+      </td>
+      <td>
+        <span *ngIf="formgroup.get('Trainer_Name').hasError('required')" style="color:red">Trainer Name is required </span>
+        <span *ngIf="formgroup.get('Trainer_Name').hasError('pattern')" style="color:red">Enter Valid Trainer_Name </span>
+      </td>
+    </tr>
+    <tr>
+      <td>Trainer Experience </td>
+      <td>
+        <input type="text" formControlName="Trainer_Experience" />
+      </td>
+    </tr>
+    <tr>
+      <td>Stream </td>
+      <td>
+        <input type="text" formControlName="Stream" />
+      </td>
+    </tr>
+    <tr>
+      <td>Contact Number</td>
+      <td>
+        <input type="text" formControlName="contact_number" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>Address </td>
+      <td>
+        <input type="text" formControlName="Address" /> </td>
+    </tr>
+
+    <tr>
+      <td>C </td>
+      <td>
+        <input type="radio" formControlName="c" value="Active" />Active
+        <input type="radio" formControlName="c" value="InActive" />InActive</td>
+    </tr>
+
+    <tr>
+      <td>
+        <button [disabled]="formgroup.invalid">Register</button>
+      </td>
+      <td>
+        <button>Reset</button>
+      </td>
+    </tr>
+  </table>
+</form>

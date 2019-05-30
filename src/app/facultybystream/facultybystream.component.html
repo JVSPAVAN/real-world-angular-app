@@ -1,0 +1,41 @@
+<div>
+
+   <h3>View Faculties By Stream</h3>
+   
+
+   
+   Select CustName : <select [(ngModel)]="selectedvalue"    (change)="getSelectedFacultybyStream()">
+                        <option *ngFor="let stream of streams" class="warning"   value="{{stream}}">{{stream}}</option>
+                     </select>
+                     
+                     
+                     <br>
+                     
+                      <br>
+                      
+                      <table *ngIf="faculty1" border="1" width="50%" class="table">
+                      
+                          <tr class="warning">
+                          
+                            <th>Faculty Name</th></tr>
+                         
+                        
+                        
+                        
+                        	<tr *ngFor="let facs of faculty1">	     
+                              <td    >{{facs.facName}}</td>
+                            
+                             
+                          
+                          </tr>
+                         
+                      
+                      </table>
+                     
+                     
+                     
+
+
+
+
+</div>
